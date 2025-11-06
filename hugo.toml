@@ -9,6 +9,7 @@ enableRobotsTXT = true
 style = "monokai"
 
 [params]
+  mainSections = ["posts", "projects"]
   defaultTheme = "auto"
   ShowShareButtons = false
   ShowReadingTime = true

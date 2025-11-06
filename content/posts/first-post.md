@@ -1,7 +1,9 @@
 ---
-title: "First Post"
+title: "Example post"
 date: 2025-11-06
 tags: ["hugo", "setup"]
 ---
 
-This is a demo post to verify the list page and navigation.
+# Пример поста в hugo
+
+Пример того, как выглядит пост
