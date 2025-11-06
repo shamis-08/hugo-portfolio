@@ -1,7 +1,6 @@
 ---
 title: "Example post"
-date: 2025-11-06
-tags: ["hugo", "setup"]
+date: 2025-09-20
 ---
 
 # Пример поста в hugo
