@@ -9,18 +9,9 @@ enableRobotsTXT = true
 style = "monokai"
 
 [params]
-  mainSections = ["posts", "projects"]
+  homeInfoParams = { Title = "Alena Shamis", Content = "Student of group P3468" }
   defaultTheme = "auto"
   ShowShareButtons = false
   ShowReadingTime = true
   ShowBreadCrumbs = true
   comments = false
-
-[params.profileMode]
-  enabled = true
-  title   = "Alena Shamis"
-  subtitle = "Student of group P3468"
-  imageUrl = "images/avatar.png"
-  imageTitle = "Me"
-  imageWidth = 160
-  imageHeight = 160
