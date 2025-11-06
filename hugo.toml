@@ -9,22 +9,17 @@ enableRobotsTXT = true
 style = "monokai"
 
 [params]
-  homeInfoParams = { Title = "Hi there 👋", Content = "Welcome to my blog" }
   defaultTheme = "auto"
   ShowShareButtons = false
   ShowReadingTime = true
   ShowBreadCrumbs = true
   comments = false
 
-[[menu.main]]
-  name = "Archives"
-  url = "archives"
-  weight = 10
-[[menu.main]]
-  name = "Tags"
-  url = "tags"
-  weight = 20
-[[menu.main]]
-  name = "Series"
-  url = "series"
-  weight = 30
+[params.profileMode]
+  enabled = true
+  title   = "Alena Shamis"
+  subtitle = "Student of group P3468"
+  imageUrl = "images/avatar.jpg"
+  imageTitle = "Me"
+  imageWidth = 160
+  imageHeight = 160
