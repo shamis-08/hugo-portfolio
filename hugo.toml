@@ -1,4 +1,4 @@
-baseURL = "https://shamis-08.github.io/"
+baseURL = "https://shamis-08.github.io/hugo-portfolio/"
 title = "Portfolio"
 theme = "PaperMod"
 [pagination]
