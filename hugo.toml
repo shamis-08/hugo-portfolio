@@ -1,0 +1,30 @@
+baseURL = "https://shamis-08.github.io/"
+title = "Portfolio"
+theme = "PaperMod"
+[pagination]
+  pagerSize = 5
+enableRobotsTXT = true
+
+[markup.highlight]
+style = "monokai"
+
+[params]
+  homeInfoParams = { Title = "Hi there 👋", Content = "Welcome to my blog" }
+  defaultTheme = "auto"
+  ShowShareButtons = false
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  comments = false
+
+[[menu.main]]
+  name = "Archives"
+  url = "archives"
+  weight = 10
+[[menu.main]]
+  name = "Tags"
+  url = "tags"
+  weight = 20
+[[menu.main]]
+  name = "Series"
+  url = "series"
+  weight = 30
