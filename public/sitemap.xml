@@ -1,1 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://shamis-08.github.io/hugo-portfolio/posts/first-post/</loc><lastmod>2025-09-20T00:00:00+00:00</lastmod></url><url><loc>https://shamis-08.github.io/hugo-portfolio/</loc><lastmod>2025-09-20T00:00:00+00:00</lastmod></url><url><loc>https://shamis-08.github.io/hugo-portfolio/posts/</loc><lastmod>2025-09-20T00:00:00+00:00</lastmod></url><url><loc>https://shamis-08.github.io/hugo-portfolio/categories/</loc></url><url><loc>https://shamis-08.github.io/hugo-portfolio/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/hugo-portfolio/</loc>
+    <lastmod>2025-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-portfolio/posts/</loc>
+    <lastmod>2025-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-portfolio/posts/lab1/</loc>
+    <lastmod>2025-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-portfolio/posts/first-post/</loc>
+    <lastmod>2025-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/hugo-portfolio/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/hugo-portfolio/tags/</loc>
+  </url>
+</urlset>
