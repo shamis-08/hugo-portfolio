@@ -22,7 +22,7 @@
 &lt;p&gt;cd Desktop/demo-repo&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Инициализируем локальный репозиторий Git и проверяем его статус&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;git status&#34; loading=&#34;lazy&#34; src=&#34;https://shamis-08.github.io/hugo-portfolio/images/file.png&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img alt=&#34;git status&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/hugo-portfolio/images/git_status.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Example post</title>
