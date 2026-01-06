@@ -1,116 +1,289 @@
 ---
-title: "Работа с фреймворком Bootstrap 5"
+title: "Интеграция Bootstrap 5 в приложение с luxon. Этап 2"
 date: 2026-01-06
 ---
 
-Ссылка на GitHub:
-- https://github.com/shamis-08/bootstrap5
-
 Ссылка на helios:
-- https://se.ifmo.ru/~s369039/bootstrap5/
+- https://se.ifmo.ru/~s369039/bootstrap5-2/
 
-## Цель задания
+## Внешний вид приложения с открытым окном
 
-Освоение базовых возможностей Bootstrap 5 для быстрой и удобной разработки адаптивного дизайна страницы, включая использование сетки, управление отображением элементов при разных разрешениях экрана, работа с формами и иконами.
+![bootstrap5-2](https://shamis-08.github.io/hugo-portfolio/images/bootstrap5-2.png)
 
-## Задача
+## Код
 
-Создать простой **одностраничный сайт** (сайт о продукте или сайт-портфолио) с использованием фреймворка **Bootstrap 5**, содержащий следующие элементы.
+```
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Продукт — Одностраничный сайт на Bootstrap 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-### 1. Верхняя навигационная панель (navbar):
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    >
 
-**Требования:**
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+</head>
+<body class="d-flex flex-column min-vh-100">
 
-- Статичный элемент, закрепленный сверху.
-- Включает логотип проекта слева и меню справа («Главная», «Контакты»).
+<!-- Навбар -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#hero">МойПродукт</a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Переключение навигации">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-Реализовать с использованием стандартных компонентов **Navbar** из Bootstrap 5.
+        <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#hero">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
+<section id="hero" class="bg-light py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Добро пожаловать!</h1>
+                <h2 class="h4 text-muted mb-4">
+                    Мы помогаем быстро запускать адаптивные сайты и лендинги
+                    с использованием Bootstrap 5.
+                </h2>
 
-### 2. Заголовочная секция (jumbotron) с текстом приветствия и коротким описанием сервиса:
+                <p class="lead mb-4">
+                    Создайте современный, аккуратный и удобный интерфейс без погружения в
+                    сложную верстку с нуля.
+                </p>
 
-**Содержимое секции:**
+                <!-- Кнопка открытия формы обратной связи (модальное окно) -->
+                <button type="button"
+                        class="btn btn-primary btn-lg"
+                        data-bs-toggle="modal"
+                        data-bs-target="#contactModal">
+                    Связаться с нами
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
-- Заголовок **H1**: `Добро пожаловать!`
-- Подзаголовок **H2**: краткое описание предлагаемого продукта или услуги.
+<!-- Блок с luxon: 3 колонки 2-8-2 -->
+<section class="py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-2">
+                <!-- Пустая колонка слева -->
+            </div>
+            <div class="col-12 col-md-8">
+                <button
+                        id="showTimeBtn"
+                        type="button"
+                        class="btn btn-danger btn-lg w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#timeModal">
+                    Показать время
+                </button>
+            </div>
+            <div class="col-12 col-md-2">
+                <!-- Пустая колонка справа -->
+            </div>
+        </div>
+    </div>
+</section>
 
-Дополнительно допускается:
+<section class="py-5">
+    <div class="container">
+        <h3 class="text-center mb-5 fw-bold">Почему именно наш продукт</h3>
+        <div class="row g-4">
 
-- краткий текст (1–2 предложения);
-- кнопка для открытия формы обратной связи.
+            <!-- Блок 1
+             на маленьких экранах идет вторым, на больших — первым -->
+            <div class="col-md-4 order-2 order-md-1">
+                <div class="h-100 p-4 border rounded-3 text-center">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Быстрый старт</h4>
+                    <p class="mb-0">
+                        Используйте готовые компоненты Bootstrap, чтобы запустить сайт
+                        за считанные часы, а не дни.
+                    </p>
+                </div>
+            </div>
 
-### 3. Основная секция с информацией:
+            <!-- Блок 2
+            на маленьких экранах идет первым, на больших — вторым -->
+            <div class="col-md-4 order-1 order-md-2">
+                <div class="h-100 p-4 border rounded-3 text-center">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-mobile-screen-button fa-2x text-success"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Адаптивный дизайн</h4>
+                    <p class="mb-0">
+                        Сетка Bootstrap и flexbox гарантируют корректное отображение
+                        на смартфонах, планшетах и ПК.
+                    </p>
+                </div>
+            </div>
 
-Использовать **12-колоночную систему Bootstrap**.
+            <!-- Блок 3 -->
+            <div class="col-md-4 order-3 order-md-3">
+                <div class="h-100 p-4 border rounded-3 text-center">
+                    <div class="mb-3">
+                        <i class="fa-solid fa-shield-halved fa-2x text-danger"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-3">Надежность</h4>
+                    <p class="mb-0">
+                        Проверенный фреймворк, большая документация и сообщество
+                        помогают поддерживать проект в отличной форме.
+                    </p>
+                </div>
+            </div>
 
-**Требования:**
+        </div>
+    </div>
+</section>
 
-- Создать **три блока** с информацией о проекте.
-- На **больших экранах** (например, `md`/`lg` и выше) — расположить в одну строку (три колонки).
-- На **маленьких экранах** — расположить блоки **вертикально** (один под другим).
-- Порядок блоков на маленьких экранах должен **отличаться** от порядка на больших (использовать классы `order-*`).
+<!-- Модальное окно с формой обратной связи -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <!--
+      modal-dialog-centered — вертикальная центровка (flexbox)
+      modal-fullscreen-sm-down — на мобильных устройствах форма занимает всю ширину экрана
+    -->
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Форма обратной связи</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <!-- Flex-контейнер, центрируем форму -->
+                <form class="w-100">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text"
+                               class="form-control"
+                               id="name"
+                               placeholder="Ваше имя">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email"
+                               class="form-control"
+                               id="email"
+                               placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control"
+                                  id="message"
+                                  rows="4"
+                                  placeholder="Ваше сообщение"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <span class="text-muted small">
+                    Мы ответим в течение 24 часов.
+                </span>
+                <button type="button" class="btn btn-primary">
+                    Отправить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
-Каждый блок должен включать:
+<!-- Модальное окно с luxon-датой/временем -->
+<div class="modal fade" id="timeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Выполнила: Шамис Алена</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <p id="dateTimeText" class="lead mb-0"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Закрыть
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
-- заголовок;
-- небольшой абзац с описанием;
-- значок **Font Awesome**, соответствующий тематике блока.
+<!--Нижний колонтитул-->
+<footer id="contacts" class="bg-dark text-white py-4 mt-auto d-none d-md-block">
+    <div class="container">
+        <div class="row gy-2">
+            <div class="col-md-4">
+                <h5 class="h6 text-uppercase fw-bold mb-2">Контакты</h5>
+                <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>+7 (900) 123-45-67</p>
+                <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i>info@shamis-08.ru</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="h6 text-uppercase fw-bold mb-2">Адрес</h5>
+                <p class="mb-0">
+                    <i class="fa-solid fa-location-dot me-2"></i>
+                    г. Санкт-Петербург, ул. Ломоносова, д. 9
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <h5 class="h6 text-uppercase fw-bold mb-2">Мы в сети</h5>
+                <a href="#" class="text-white me-3"><i class="fa-brands fa-vk"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-### 4. Форма обратной связи:
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
-Форма должна **открываться по нажатию кнопки** на главном экране (например, в заголовочной секции). Можно использовать:
+<!-- Luxon -->
+<script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
 
-- модальное окно (**Bootstrap Modal**),
-- либо отдельный блок, который появляется при клике.
+<!-- Скрипт для вывода даты/времени -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const DateTime = luxon.DateTime;
+        const showTimeBtn = document.getElementById('showTimeBtn');
+        const dateTimeText = document.getElementById('dateTimeText');
 
-**Состав формы:**
+        showTimeBtn.addEventListener('click', function () {
+            const now = DateTime.now().setLocale('ru');
+            const formatted = now.toFormat('dd.MM.yyyy HH:mm:ss');
+            dateTimeText.textContent = formatted;
+        });
+    });
+</script>
 
-- поле ввода имени;
-- поле ввода email;
-- поле для сообщения (textarea);
-- кнопка отправки формы.
-
-**Требования по вёрстке:**
-
-- форма центрируется на странице с помощью **Flexbox**;
-- на мобильных устройствах форма должна занимать **всю ширину контейнера** (`w-100`, адаптивные классы Bootstrap).
-
-### 5. Нижний колонтитул (Footer):
-
-**Содержимое:**
-
-- контактный телефон;
-- email;
-- адрес.
-
-**Отображение:**
-
-- Footer должен быть **скрыт на мобильных устройствах**;
-- Footer должен быть **виден только на планшетах и ПК**  
-  (использовать классы видимости, например: `d-none d-md-block`).
-
-
-### 6. Иконки и оформление шрифтов:
-
-**Требования:**
-
-- Для каждого информационного блока (из основного раздела) добавить иконку **Font Awesome**.
-- Иконки должны логически соответствовать тематике блоков (услуги, преимущества, контакты и т.д.).
-- Заголовки и основной текст стилизовать с помощью классов Bootstrap:
-    - размеры шрифта и начертание (`fw-bold`, `fs-1`, `fs-4` и т.п.);
-    - отступы (`mt-*`, `mb-*`, `py-*`, `px-*`).
-
-
-## Общие требования к выполнению задания:
-
-1. Используйте CDN-версии библиотек Bootstrap CSS и JavaScript.
-   
-2. Все элементы должны соответствовать документации Bootstrap 5.
-   
-3. Адаптируйте дизайн для мобильных устройств (используйте классы d-none, d-md-block и аналогичные для управления видимостью блоков).
-   
-4. Применяйте механизм Flexbox для центровки форм и выравнивания элементов.
-   
-5. Обеспечьте валидный HTML-код (закрывайте все открывающие теги, соблюдайте правильную вложенность элементов).
-   
-6. Оформление должно выглядеть аккуратно и согласованно.
+</body>
+</html>
+```
