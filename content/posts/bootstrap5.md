@@ -1,4 +1,7 @@
-# Работа с фреймворком Bootstrap 5
+---
+title: "Работа с фреймворком Bootstrap 5"
+date: 2026-01-06
+---
 
 Ссылка на GitHub:
 - https://github.com/shamis-08/bootstrap5
