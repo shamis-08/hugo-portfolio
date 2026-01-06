@@ -12,7 +12,7 @@ date: 2026-01-06
 
 ## Код
 
-```
+```html
 <!doctype html>
 <html lang="ru">
 <head>
