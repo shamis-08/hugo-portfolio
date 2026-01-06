@@ -12,5 +12,5 @@ date: 2025-09-27
 
 Инициализируем локальный репозиторий Git и проверяем его статус
 
-![git status](https://shamis-08.github.io/hugo-portfolio/images/git_status.png)
+![git status](https://shamis-08.github.io/hugo-portfolio/images/git/git_status.png)
 
