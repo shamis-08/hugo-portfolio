@@ -70,7 +70,7 @@ POST-запрос:
 
 Это свидетельствует о том, что API Swagger Petstore принимает POST-запросы исключительно по защищённому протоколу HTTPS. Инструменты netcat и telnet не поддерживают TLS-шифрование и не позволяют выполнять HTTPS-запросы напрямую, поэтому получение успешного ответа при использовании данных инструментов невозможно.
 
-![netcat post petstore](https://shamis-08.github.io/hugo-portfolio/images/git/netcat_post_petstore.png)
+![netcat post petstore](https://shamis-08.github.io/hugo-portfolio/images/http/netcat_post_petstore.png)
 
 ## 2.2 cURL
 
@@ -86,13 +86,13 @@ POST-запрос:
 Результат: получен HTTP-ответ с JSON созданногопитомца.
 
 <!-- Скриншот: вывод curl POST (с ключом -i, чтобы был статус-код) -->
-![curl post petstore](https://shamis-08.github.io/hugo-portfolio/images/git/curl_post_petstore.png)
+![curl post petstore](https://shamis-08.github.io/hugo-portfolio/images/http/curl_post_petstore.png)
 
 ## 3. Установка Postman
 
 Postman установлен и успешно запущен
 
-![postman main](https://shamis-08.github.io/hugo-portfolio/images/git/postman_main.png)
+![postman main](https://shamis-08.github.io/hugo-portfolio/images/http/postman_main.png)
 
 ## 4. GET-запрос к API Банка России в Postman
 
@@ -112,7 +112,7 @@ URL запроса:
 
 Результат: получен XML-ответ с курсами валют по датам.
 
-![postman cbr request](https://shamis-08.github.io/hugo-portfolio/images/git/postman_cbr.png)
+![postman cbr request](https://shamis-08.github.io/hugo-portfolio/images/http/postman_cbr.png)
 
 ## Вывод
 В ходе лабораторной работы выполнены GET- и POST-запросы к публичному Swagger Petstore API с использованием Telnet, netcat и cURL. В Postman выполнен GET-запрос к API Банка России для получения курса выбранной валюты за заданный период.
